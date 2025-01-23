@@ -91,3 +91,78 @@ input:focus{
 .login-button:hover{
     background-color: var(--primary-color);
 }
+
+
+.social-login{
+    margin-top: 2rem;
+}
+
+.divider{
+    display: block;
+    text-align: center;
+    font-size: 0.875rem;
+    color: var(--text-secondary);
+    position: relative;
+}
+
+.divider::before ,
+.divider::after{
+    content: ''; 
+    position: absolute;
+    top: 50%;
+    width: calc(50% - 80px);
+    height: 1px;
+    background-color: var(--border-color);
+}
+
+.divider::before{
+    left: 0;
+}
+
+.divider::after{
+    right: 0;
+}
+
+.social-buttons{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+}
+
+.social-button{
+  display: flex; 
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  padding: 0.75rem;
+  background-color: var(--input-background);
+  border-radius: 0.5rem;
+  border: solid 1px var(--border-color);
+  color: var(--text-secondary);
+}
+
+.social-button span{
+    font-weight: 600;
+}
+.logo{
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   gap: 0.5rem;
+
+}
+.dot{
+    width: 8px;
+    height: 8px;
+    background-color: var(--primary-color);
+    border-radius: 50%; 
+    animation: bounce 1.4s infinite ease-in-out;
+}
+
+@keyframes bounce{
+    0%, 80%, 100% {transform: scale(0);}
+    40%{transform: scale(1);}
+}
+
+.dot:nth-child(1){animation-delay: -0.32s;}
+.dot:nth-child(2){ animation-delay: -0.16s;}
